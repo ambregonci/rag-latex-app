@@ -7,11 +7,11 @@ Bem-vindo ao **Assistente de PDFs com Gemini**! Esta aplicação Streamlit aprim
 Este assistente permite que você:
 
 1.  **Converse com PDFs (RAG):** Faça upload de múltiplos PDFs e interaja com um chatbot inteligente que responde a perguntas baseadas no conteúdo dos seus documentos.
-    ![Screenshot da aba Chat RAG PDFs](images/rag_chat_screenshot.png) 2.  **PDF Manuscrito para LaTeX:** Converta PDFs contendo notas manuscritas e fórmulas matemáticas em código LaTeX editável. Ideal para digitalizar seus rascunhos acadêmicos!
-    ![Screenshot da aba PDF para LaTeX](images/pdf_to_latex_screenshot.png) 3.  **Melhoria de Código LaTeX:** Obtenha sugestões e melhorias da IA Gemini para o seu código LaTeX existente, visando clareza, estrutura e formatação.
-    ![Screenshot da aba Melhorar LaTeX](images/improve_latex_screenshot.png) 4.  **Editor LaTeX Online:** Um ambiente completo de IDE com editor de código e visualizador de PDF lado a lado para compilar e pré-visualizar seu LaTeX em tempo real.
-    ![Screenshot da aba Editor LaTeX](images/latex_editor_screenshot.png) 5.  **Gerador de Página Web Interativa:** Transforme seu código LaTeX em uma página web HTML interativa e moderna, com renderização de fórmulas e visualizações dinâmicas (como simulações de física!).
-    ![Screenshot da aba Gerador de Página Interativa](images/interactive_page_screenshot.png) ## 🚀 Como Rodar pela Primeira Vez
+    ![Screenshot da aba Chat RAG PDFs](images/rag_chat.png) 2.  **PDF Manuscrito para LaTeX:** Converta PDFs contendo notas manuscritas e fórmulas matemáticas em código LaTeX editável. Ideal para digitalizar seus rascunhos acadêmicos!
+    ![Screenshot da aba PDF para LaTeX](images/latex_conversion.png) 3.  **Melhoria de Código LaTeX:** Obtenha sugestões e melhorias da IA Gemini para o seu código LaTeX existente, visando clareza, estrutura e formatação.
+    ![Screenshot da aba Melhorar LaTeX](images/melhorar_tex.png) 4.  **Editor LaTeX Online:** Um ambiente completo de IDE com editor de código e visualizador de PDF lado a lado para compilar e pré-visualizar seu LaTeX em tempo real.
+    ![Screenshot da aba Editor LaTeX](images/latex_editor.png) 5.  **Gerador de Página Web Interativa:** Transforme seu código LaTeX em uma página web HTML interativa e moderna, com renderização de fórmulas e visualizações dinâmicas (como simulações de física!).
+    ![Screenshot da aba Gerador de Página Interativa](images/interactive_page.png) ## 🚀 Como Rodar pela Primeira Vez
 
 Siga estes passos para configurar e executar a aplicação em seu ambiente local.
 
