@@ -5,7 +5,7 @@ langchain-community
 langchain-google-genai
 ollama
 chromadb
-pypdf
+pypdf2
 pdfplumber
 google-generativeai
 typing
