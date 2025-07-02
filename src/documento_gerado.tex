@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{lmodern}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{bm}
+\geometry{margin=2.5cm}
+\setlength{\parskip}{1em}
+
+\title{Resolução Detalhada da Lista de Exercícios 2 - Física Estatística}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introdução}
+
+Este documento apresenta a resolução detalhada dos quatro exercícios propostos na Lista de Exercícios 2 da disciplina de Física Estatística, focada no problema do passeio aleatório (random walk) em diferentes cenários. As resoluções foram elaboradas seguindo os critérios solicitados, utilizando como base teórica principal o livro de referência fornecido (\textit{Statistical Physics II - Reference 1.pdf}) e conhecimentos gerais sobre mecânica estatística, processos estocásticos, distribuições de probabilidade (Binomial, Gaussiana, Uniforme, Cauchy-Lorentz) e o Teorema do Limite Central.
+
+Cada exercício é resolvido passo a passo, com ênfase na clareza das justificativas matemáticas e na interpretação física dos resultados. A notação utilizada busca ser consistente e rigorosa. Comentários sobre abordagens alternativas e conexões com conceitos mais amplos da física estatística são incluídos quando pertinente.
+
+\newpage
+
+\section*{Resolução do Exercício 1}
+
+Este exercício aborda o problema clássico do passeio aleatório (random walk) unidimensional e simétrico. Consideramos uma partícula que realiza $N$ passos em uma linha. A cada passo, a partícula tem uma probabilidade $p$ de se mover para a direita (digamos, +1 unidade de comprimento) e uma probabilidade $q$ de se mover para a esquerda (-1 unidade). O exercício especifica o caso simétrico, onde $p = q = 1/2$. O deslocamento líquido total após $N$ passos é denotado por $m$. Se $n_1$ for o número de passos para a direita e $n_2$ for o número de passos para a esquerda, temos que o número total de passos é $N = n_1 + n_2$, e o deslocamento líquido é $m = n_1 - n_2$. O objetivo é calcular os valores médios (esperanças) dos primeiros quatro momentos do deslocamento: $\langle m \rangle$, $\langle m^2 \rangle$, $\langle m^3 \rangle$ e $\langle m^4 \rangle$.
+
+Uma maneira alternativa e muitas vezes mais direta de analisar o problema é considerar o deslocamento em cada passo individualmente. Seja $s_i$ o deslocamento no $i$-ésimo passo, onde $i$ varia de 1 a $N$. Para o caso simétrico, $s_i$ pode assumir os valores +1 (com probabilidade $p=1/2$) ou -1 (com probabilidade $q=1/2$). O deslocamento total $m$ é a soma dos deslocamentos em cada passo:
+\[
+m = \sum_{i=1}^{N} s_i
+\]
+
+Os passos são considerados eventos independentes. Vamos calcular as propriedades estatísticas de um único passo $s_i$:
+
+\begin{align*}
+\text{Valor médio de } s_i: &\quad \langle s_i \rangle = (+1)p + (-1)q = (+1)\frac{1}{2} + (-1)\frac{1}{2} = 0 \\
+\text{Valor médio de } s_i^2: &\quad \langle s_i^2 \rangle = (+1)^2 p + (-1)^2 q = (1)\frac{1}{2} + (1)\frac{1}{2} = 1 \\
+\text{Valor médio de } s_i^3: &\quad \langle s_i^3 \rangle = (+1)^3 p + (-1)^3 q = (1)\frac{1}{2} + (-1)\frac{1}{2} = 0 \\
+\text{Valor médio de } s_i^4: &\quad \langle s_i^4 \rangle = (+1)^4 p + (-1)^4 q = (1)\frac{1}{2} + (1)\frac{1}{2} = 1
+\end{align*}
+
+Agora, podemos usar essas propriedades e a linearidade da esperança para calcular os momentos de $m$.
+
+\subsection*{Cálculo de $\langle m \rangle$ (Deslocamento Médio)}
+
+\[
+\langle m \rangle = \left\langle \sum_{i=1}^{N} s_i \right\rangle = \sum_{i=1}^{N} \langle s_i \rangle = \sum_{i=1}^{N} 0 = 0
+\]
+
+Fisicamente, isso significa que, em média, após $N$ passos, a partícula não tem um deslocamento líquido preferencial para a direita ou para a esquerda, o que é esperado em um passeio simétrico.
+
+\subsection*{Cálculo de $\langle m^2 \rangle$ (Deslocamento Quadrático Médio)}
+
+\begin{align*}
+\langle m^2 \rangle &= \left\langle \left( \sum_{i=1}^{N} s_i \right)^2 \right\rangle = \left\langle \sum_{i=1}^{N} \sum_{j=1}^{N} s_i s_j \right\rangle = \sum_{i=1}^{N} \sum_{j=1}^{N} \langle s_i s_j \rangle \\
+&= \sum_{i=1}^{N} \langle s_i^2 \rangle + \sum_{i \neq j} \langle s_i s_j \rangle = \sum_{i=1}^{N} 1 + \sum_{i \neq j} 0 = N
+\end{align*}
+
+Como $\langle m \rangle = 0$, então $\text{Var}(m) = \langle m^2 \rangle = N$.
+
+\subsection*{Cálculo de $\langle m^3 \rangle$}
+
+Todos os termos $\langle s_i s_j s_k \rangle$ na expansão da soma tripla são nulos devido à simetria da distribuição e independência das variáveis. Logo:
+
+\[
+\langle m^3 \rangle = 0
+\]
+
+\subsection*{Cálculo de $\langle m^4 \rangle$}
+
+Consideramos os casos em que o produto $\langle s_i s_j s_k s_l \rangle$ é não nulo:
+\[
+\langle m^4 \rangle = \sum_{i,j,k,l=1}^{N} \langle s_i s_j s_k s_l \rangle
+\]
+Os únicos termos não nulos são aqueles onde os índices aparecem em pares:
+\[
+\langle m^4 \rangle = N + 3N(N - 1) = 3N^2 - 2N
+\]
+
+\subsection*{Resumo dos Resultados do Exercício 1}
+
+\begin{itemize}
+    \item $\langle m \rangle = 0$
+    \item $\langle m^2 \rangle = N$
+    \item $\langle m^3 \rangle = 0$
+    \item $\langle m^4 \rangle = 3N^2 - 2N$
+\end{itemize}
+
+Esses resultados são consistentes com as propriedades de distribuições simétricas e com o comportamento esperado de processos de passeio aleatório.
+
+\vspace{1em}
+\textit{Nota: Uma abordagem alternativa envolveria o uso direto da distribuição binomial para $n_1$, o número de passos para a direita, e o cálculo dos momentos de $m = 2n_1 - N$. Isso requer o cálculo dos momentos $\langle n_1 \rangle$, $\langle n_1^2 \rangle$, $\langle n_1^3 \rangle$, $\langle n_1^4 \rangle$ da distribuição binomial $B(N, 1/2)$, que leva aos mesmos resultados finais, embora possa ser algebricamente mais complexo para momentos de ordem superior.}
+
+\newpage
+
+% Aqui você poderá continuar a partir do Exercício 2.
+
+
+Cálculo de $\langle m^4 \rangle$: O quarto momento é $\langle m^4 \rangle = \langle (\sum_{i=1}^{N} s_i)^4 \rangle$. Expandindo a quarta potência:
+
+$$ \langle m^4 \rangle = \left\langle \sum_{i,j,k,l=1}^{N} s_i s_j s_k s_l \right\rangle = \sum_{i,j,k,l=1}^{N} \langle s_i s_j s_k s_l \rangle $$
+
+Novamente, devido à independência dos passos e ao fato de que $\langle s_i \rangle = 0$ e $\langle s_i^3 \rangle = 0$, os únicos termos $\langle s_i s_j s_k s_l \rangle$ que sobrevivem são aqueles em que cada índice aparece um número par de vezes (zero, duas ou quatro vezes). Os casos possíveis são:
+
+$i=j=k=l$: Temos $N$ termos da forma $\langle s_i^4 \rangle$. Como $\langle s_i^4 \rangle = 1$, a contribuição total é $N \times 1 = N$.
+Dois pares de índices iguais, por exemplo, $i=j$ e $k=l$, com $i \neq k$. Temos termos da forma $\langle s_i^2 s_k^2 \rangle$. Pela independência, $\langle s_i^2 s_k^2 \rangle = \langle s_i^2 \rangle \langle s_k^2 \rangle = 1 \times 1 = 1$. Quantos desses termos existem? Precisamos escolher 2 índices distintos de $N$, o que pode ser feito de $\binom{N}{2}$ maneiras. Para cada par de índices, digamos $i$ e $k$, existem 3 maneiras de formar os pares $(i,i,k,k)$, $(i,k,i,k)$, $(i,k,k,i)$ - pensando nas posições na soma $s_i s_j s_k s_l$. Mais precisamente, o coeficiente multinomial para termos do tipo $s_i^2 s_k^2$ na expansão de $(\sum s_i)^4$ é $\frac{4!}{2!2!} = 6$. O número de pares distintos $(i, k)$ com $i \neq k$ é $N(N-1)$. Contudo, a soma $\sum_{i,j,k,l}$ inclui todas as permutações. A forma mais simples é considerar os tipos de termos não nulos na soma $\sum_{i,j,k,l} \langle s_i s_j s_k s_l \rangle$: a) Termos com $i=j=k=l$: $\sum_i \langle s_i^4 \rangle = N \times 1 = N$. b) Termos com $i=j \neq k=l$: $\sum_{i \neq k} \langle s_i^2 s_k^2 \rangle = \sum_{i \neq k} \langle s_i^2 \rangle \langle s_k^2 \rangle = \sum_{i \neq k} 1$. Existem $N(N-1)$ tais pares $(i, k)$. c) Termos com $i=k \neq j=l$: $\sum_{i \neq j} \langle s_i s_j s_i s_j \rangle = \sum_{i \neq j} \langle s_i^2 s_j^2 \rangle = N(N-1)$. d) Termos com $i=l \neq j=k$: $\sum_{i \neq j} \langle s_i s_j s_j s_i \rangle = \sum_{i \neq j} \langle s_i^2 s_j^2 \rangle = N(N-1)$.
+Somando todas as contribuições não nulas:
+
+$$ \langle m^4 \rangle = N + N(N-1) + N(N-1) + N(N-1) = N + 3N(N-1) $$ $$ \langle m^4 \rangle = N + 3N^2 - 3N = 3N^2 - 2N $$
+
+Resumo dos Resultados: Para o passeio aleatório unidimensional simétrico ($p=q=1/2$) após $N$ passos, os primeiros quatro momentos do deslocamento líquido $m$ são:
+
+$\langle m \rangle = 0$
+$\langle m^2 \rangle = N$
+$\langle m^3 \rangle = 0$
+$\langle m^4 \rangle = 3N^2 - 2N$
+
+$z = \pm ib$
+
+
+Aplicação do Teorema dos Resíduos: O teorema afirma que a integral de contorno fechado é $2\pi i$ vezes a soma dos resíduos dos polos dentro do contorno.
+Para $k > 0$: A integral sobre o contorno $C_R$ (sentido anti-horário) é $\oint_{C_R} f(z) dz = \int_{-R}^{R} f(x) dx + \int_{\Gamma_R} f(z) dz$. Pelo Teorema dos Resíduos, $\oint_{C_R} f(z) dz = 2\pi i \times \text{Res}(f, ib) = 2\pi i \left( \frac{e^{-kb}}{2ib} \right) = \frac{\pi}{b} e^{-kb}$. Pelo Lema de Jordan, $\lim_{R \to \infty} \int_{\Gamma_R} f(z) dz = 0$. Portanto, no limite $R \to \infty$, a integral $I = \int_{-\infty}^{\infty} f(x) dx = \frac{\pi}{b} e^{-kb}$.
+Para $k < 0$: A integral sobre o contorno $C'R$ (sentido horário) é $\oint{C'R} f(z) dz = \int{-R}^{R} f(x) dx + \int_{\Gamma'R} f(z) dz$. Pelo Teorema dos Resíduos, a integral no sentido anti-horário seria $2\pi i \times \text{Res}(f, -ib)$. Como nosso contorno é horário, a integral vale $-2\pi i \times \text{Res}(f, -ib) = -2\pi i \left( \frac{e^{kb}}{-2ib} \right) = \frac{\pi}{b} e^{kb}$. Pelo Lema de Jordan, $\lim{R \to \infty} \int_{\Gamma'R} f(z) dz = 0$. Portanto, no limite $R \to \infty$, a integral $I = \int{-\infty}^{\infty} f(x) dx = \frac{\pi}{b} e^{kb}$.
+
+Caso 3: $k = 0$: A integral se torna $\int_{-\infty}^{\infty} \frac{1}{s^2+b^2} ds$. Esta é uma integral real padrão, cujo resultado é $\frac{1}{b} [\arctan(s/b)]_{-\infty}^{\infty} = \frac{1}{b} (\pi/2 - (-\pi/2)) = \pi/b$.
+
+Reconhecemos esta integral como a transformada inversa que nos leva de volta a uma distribuição de Cauchy-Lorentz. Se a transformada de $\frac{1}{\pi} \frac{B}{s^2 + B^2}$ é $e^{-B|k|}$, então a transformada inversa de $e^{-B|k|}$ é $\frac{1}{\pi} \frac{B}{x^2 + B^2}$.
+
+\end{document}

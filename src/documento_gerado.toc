@@ -1,0 +1,24 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{\numberline {1}Introdução ao Oscilador Harmônico Clássico}{2}{}%
+\contentsline {section}{\numberline {2}O Oscilador Harmônico em Mecânica Quântica}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Pontos Importantes sobre o Oscilador Harmônico Quântico}{5}{}%
+\contentsline {subsection}{\numberline {2.2}Método Analítico: Solução via Polinômios de Hermite}{5}{}%
+\contentsline {subsection}{\numberline {2.3}O Princípio da Correspondência}{7}{}%
+\contentsline {section}{\numberline {3}Método Algébrico: Operadores Escada}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Definição de Operadores Adimensionais}{8}{}%
+\contentsline {subsection}{\numberline {3.2}Definição de Operadores Escada (Criação e Aniquilação)}{9}{}%
+\contentsline {subsection}{\numberline {3.3}Propriedades dos Autovalores do Operador Número $N$}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Lema 1: Os autovalores de $N$ são positivos ou zero.}{11}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Lema 2: Seja $\ket {\tilde {\psi }}$ um autovetor de $N$ com autovalor $\nu $, então:}{12}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Lema 3: Seja $\ket {\tilde {\psi }}$ um autovetor de $N$ com autovalor $\nu $, então:}{12}{}%
+\contentsline {subsection}{\numberline {3.4}Teorema: Os autovalores de $N$ são inteiros não negativos}{13}{}%
+\contentsline {subsection}{\numberline {3.5}Autovalores de Energia do OHU}{14}{}%
+\contentsline {subsection}{\numberline {3.6}Ação dos Operadores Escada nos Autoestados}{14}{}%
+\contentsline {subsection}{\numberline {3.7}Não-Degenerescência dos Autovalores de $\mathcal {H}$}{16}{}%
+\contentsline {subsection}{\numberline {3.8}Construção dos Autoestados}{16}{}%
+\contentsline {subsection}{\numberline {3.9}Autofunção do Estado Fundamental em Coordenadas}{16}{}%
+\contentsline {section}{\numberline {4}Momentos e Princípio da Incerteza}{17}{}%
+\contentsline {subsection}{\numberline {4.1}Representação Matricial dos Operadores Escada}{19}{}%
+\contentsline {section}{\numberline {5}Evolução Temporal e Teorema de Ehrenfest}{20}{}%
+\contentsline {section}{\numberline {6}Oscilador Harmônico Tridimensional}{22}{}%
+\contentsline {subsection}{\numberline {6.1}Oscilador Harmônico Isotrópico}{23}{}%
