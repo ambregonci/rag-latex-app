@@ -1,0 +1,11 @@
+streamlit
+streamlit-ace
+langchain
+langchain-community
+langchain-google-genai
+ollama
+chromadb
+pypdf
+pdfplumber
+google-generativeai
+typing
